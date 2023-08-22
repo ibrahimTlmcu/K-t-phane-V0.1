@@ -8,6 +8,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <h2 style="text-align:center;">Kitaplar</h2>
 
+<div style="margin-bottom:15px;margin-top:15px;" >
+
+    <input type="text" class="form-control" placeholder="  Aranacak kitabi giriniz....."/>
+
+</div>
+
 <table class="table table-bordered">
 
     <tr>
@@ -21,19 +27,23 @@
         <td>Durum</td>
     </tr>
 
-    @foreach(var k in Model)
-            {
-                <tr>
-                    <td>@k.ID</td>
-                    <td>@k.AD</td>
-                    <td>@k.YAZAR</td>
-                    <td>@k.KATEGORI</td>
-                    <td>@k.BASIMYIL</td>
-                    <td>@k.YAYINEVI</td>
-                    <td>@k.SAYFA</td>
-                    <td>@k.DURUM</td>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.ID</td>
+            <td>@k.AD</td>
+            <td>@k.YAZAR</td>
+            <td>@k.KATEGORI</td>
+            <td>@k.BASIMYIL</td>
+            <td>@k.YAYINEVI</td>
+            <td>@k.SAYFA</td>
+            <td>@k.DURUM</td>
+            <td><a href="/Kitap/KitapSil/@k.ID" class="btn bg-danger">Sil</a></td>
+            <td><a href="/Kitap/KitapGetir/@k.ID" class="btn bg-success">Guncelle</a></td>
+        </tr>
 
-                </tr>
-            }
+    }
+    
 </table>
 
+<a href="/Kitap/KitapEkle/" class="btn bg-success">Yeni Kitap Ekle</a>
