@@ -13,10 +13,20 @@ namespace WebApplication2.Controllers
         // GET: Kitap
 
         DBKUTUPHANEEntitiesEnSon db = new DBKUTUPHANEEntitiesEnSon();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var kitaplar = db.TBLKITAP.ToList();
-            return View(kitaplar);
+            
+            var kitaplar = from k in db.TBLKITAP select k;
+            if(!string.IsNullOrEmpty(p))
+            {
+                kitaplar = kitaplar.Where(m=>m.AD.Contains(p));
+            }
+   
+       
+             return View(kitaplar.ToList());
+            
+         
+          
         }
         [HttpGet]
         public ActionResult KitapEkle()
@@ -29,7 +39,11 @@ namespace WebApplication2.Controllers
         public ActionResult KitapEkle(TBLKITAP p)
         {
 
+            db.TBLKITAP.Add(p);
+            db.SaveChanges();
+
             return View();
+            
         }
 
 
@@ -49,5 +63,19 @@ namespace WebApplication2.Controllers
         }
 
 
-    } 
+        public ActionResult KitapGuncelle(TBLKITAP k)
+        {
+            var ktp = db.TBLKITAP.Find(k.ID);
+            ktp.AD = k.AD;
+            ktp.KATEGORI = k.KATEGORI;
+            ktp.YAZAR = k.YAZAR;
+            ktp.BASIMYIL = k.BASIMYIL;
+            ktp.YAYINEVI = k.YAYINEVI;
+            ktp.SAYFA = k.SAYFA;
+
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+    }
 }
