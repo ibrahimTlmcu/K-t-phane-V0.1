@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication2.Models.Entity;
 using PagedList;
+using PagedList.Mvc;
 
 
 namespace WebApplication2.Controllers
@@ -15,10 +16,12 @@ namespace WebApplication2.Controllers
 
         DBKUTUPHANEEntitiesEnSon uye = new DBKUTUPHANEEntitiesEnSon();
 
-        public ActionResult Index()
+        public ActionResult Index(int sayfa =1)
         {
-            var  uyeler = uye.TBLUYELER.ToList();
-            return View(uyeler);
+            //var  uyeler = uye.TBLUYELER.ToList();
+            var degerler = uye.TBLUYELER.ToList().ToPagedList(sayfa, 8);
+            return View(degerler);
+
         }
 
         public ActionResult UyeSil(int id ) 
@@ -51,5 +54,30 @@ namespace WebApplication2.Controllers
             return View();   
         }
 
+
+        public ActionResult UyeGetir(int id)
+        {
+            var uyeler = uye.TBLUYELER.Find(id);
+            return View("UyeGetir",uyeler);
+        }
+
+
+        public ActionResult UyeGuncelle(TBLUYELER P)
+        {
+
+            var uyeler = uye.TBLUYELER.Find(P.ID);
+            uyeler.AD = P.AD;
+            uyeler.SOYAD = P.SOYAD;
+            uyeler.KULLANICIADI = P.KULLANICIADI;
+            uyeler.MAIL = P.MAIL;
+            uyeler.SIFRE = P.SIFRE;
+            uyeler.TELEEFON = P.TELEEFON;
+            uyeler.FOTOGRAF = P.FOTOGRAF;
+            uyeler.OKUL = P.OKUL;
+
+            uye.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
     }
 }
