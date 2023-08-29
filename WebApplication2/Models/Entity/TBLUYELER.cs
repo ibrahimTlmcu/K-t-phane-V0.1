@@ -11,7 +11,8 @@ namespace WebApplication2.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLUYELER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,11 +23,15 @@ namespace WebApplication2.Models.Entity
         }
     
         public int ID { get; set; }
+        [Required(ErrorMessage ="Ad Bos Birakilmaz")]
+        [StringLength(20,ErrorMessage ="En fazla 20 Karakter Girebilirsiniz")]
         public string AD { get; set; }
         public string SOYAD { get; set; }
         public string MAIL { get; set; }
         public string KULLANICIADI { get; set; }
+        [StringLength(60, ErrorMessage = "En fazla 10 Karakter Girebilirsiniz")]
         public string SIFRE { get; set; }
+        
         public string FOTOGRAF { get; set; }
         public string TELEEFON { get; set; }
         public string OKUL { get; set; }

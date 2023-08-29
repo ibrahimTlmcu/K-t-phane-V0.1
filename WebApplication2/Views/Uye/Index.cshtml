@@ -1,0 +1,45 @@
+﻿@using WebApplication2.Models.Entity
+@model List<TBLUYELER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<h2>Index</h2>
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>UYE ID</td>
+        <td>ADI</td>
+        <td>MAIL</td>
+        <td>KULLANICI ADI</td>
+        <td>SIFRE</td>
+        <td>TELEFON</td>
+        <td>FOTOGRAF</td>
+        <td>OKUL</td>
+        <td>SIL</td>
+        <td>GUNCELLE</td>
+
+    </tr>
+    @foreach (var u in Model)
+    {
+
+        <tr>
+            <td>@u.ID</td>
+            <td>@u.AD</td>
+            <td>@u.SOYAD</td>
+            <td>@u.KULLANICIADI</td>
+            <td>@u.SIFRE</td>
+            <td>@u.TELEEFON</td>
+            <td>@u.FOTOGRAF</td>
+            <td>@u.OKUL</td>
+            <td><a href="/Uye/UyeSil/@u.ID" class="btn bg-danger">Sil</a></td>
+            <td><a href="/Personel/PersonelGetir/" class="btn bg-success">Guncelle</a></td>
+        </tr>
+        
+    }
+</table>
+<a href="/Uye/UyeEkle/" class="btn bg-success">Uye Ekle</a>

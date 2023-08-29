@@ -41,7 +41,6 @@ namespace WebApplication2.Controllers
 
             db.TBLKITAP.Add(p);
             db.SaveChanges();
-
             return View();
             
         }
