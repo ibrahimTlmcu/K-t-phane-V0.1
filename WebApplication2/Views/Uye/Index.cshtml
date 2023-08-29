@@ -1,5 +1,8 @@
 ﻿@using WebApplication2.Models.Entity
-@model List<TBLUYELER>
+
+@using PagedList.Mvc
+@using PagedList
+@model PagedList.IPagedList<TBLUYELER>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
@@ -39,7 +42,43 @@
             <td><a href="/Uye/UyeSil/@u.ID" class="btn bg-danger">Sil</a></td>
             <td><a href="/Personel/PersonelGetir/" class="btn bg-success">Guncelle</a></td>
         </tr>
-        
+
     }
 </table>
+
+<div class="pagination-container">
+    @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("index", new { sayfa }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
+</div>
+
+<style>
+    /* Sayfalama düğmeleri için özel stiller */
+    .pagination-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        .pagination-container a, .pagination-container span {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 2px;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .pagination-container .disabled {
+            pointer-events: none;
+            background-color: #ddd;
+            color: #888;
+        }
+
+        .pagination-container .active {
+            background-color: #337ab7;
+            color: #fff;
+            border-color: #337ab7;
+        }
+</style>
+
 <a href="/Uye/UyeEkle/" class="btn bg-success">Uye Ekle</a>

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication2.Models.Entity;
 using PagedList;
+using PagedList.Mvc;
 
 
 namespace WebApplication2.Controllers
@@ -15,10 +16,12 @@ namespace WebApplication2.Controllers
 
         DBKUTUPHANEEntitiesEnSon uye = new DBKUTUPHANEEntitiesEnSon();
 
-        public ActionResult Index()
+        public ActionResult Index(int sayfa =1)
         {
-            var  uyeler = uye.TBLUYELER.ToList();
-            return View(uyeler);
+            //var  uyeler = uye.TBLUYELER.ToList();
+            var degerler = uye.TBLUYELER.ToList().ToPagedList(sayfa, 8);
+            return View(degerler);
+
         }
 
         public ActionResult UyeSil(int id ) 
