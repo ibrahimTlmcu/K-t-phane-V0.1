@@ -1,13 +1,27 @@
 ﻿@using WebApplication2.Models.Entity
 @model List<TBLHAREKET>
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 
-<h2>Odunc Kitap Listesi</h2>
+
+<h2 style="
+   
+    max-height :100px;
+    background-color:paleturquoise;
+    border-radius:10px;
+    padding:15px;
+    text-align:center ;
+    backdrop-filter: blur(1000px);
+    
+    
+   ">Odunc Kitap Al</h2>
 
 
 @using (Html.BeginForm("Index", "Kitap", FormMethod.Get))
@@ -22,10 +36,14 @@
 }
 
 
-<h2> Kayitli Uyeler</h2>
 
-<table class="table table-bordered">
 
+
+
+
+<table class="table table-bordered"> 
+
+   
     <tr>
         <td>ID</td>
         <td>Kitap Adi</td>
@@ -42,13 +60,13 @@
         <tr>
             <td>@k.ID</td>
             <td>@k.TBLKITAP.AD</td>
-            <td>@k.TBLUYELER.AD&npbs @k.TBLUYELER.SOYAD</td>
+            <td>@k.TBLUYELER.KULLANICIADI</td>
             <td>@k.PERSONEL</td>
-            <td>@k.ALISTARIH</td>
-            <td>@k.IADETARIH</td>
-            <td>@k.SAYFA</td>
-            <td>@k.DURUM</td>
-            <td><a href="/Kitap/KitapSil/@k.ID" class="btn bg-danger">Kitabi Iade Et</a></td>
+            <td>@Convert.ToDateTime(k.ALISTARIH).ToString("dd/MM//yyyy")</td>
+            <td>@Convert.ToDateTime(k.IADETARIH).ToString("dd/MM//yyyy")</td>
+
+            <td><a href="/Odunc/Odunciade/@k.ID" class="btn btn-secondary">Kitabi Iade Et</a></td>
+            <td><a href="/Odunc/Odunciade/@k.ID" class="btn btn-secondary">Kitabi Iade Et</a></td>
         </tr>
     }
 

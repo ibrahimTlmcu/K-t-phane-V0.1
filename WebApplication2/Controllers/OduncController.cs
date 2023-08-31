@@ -14,7 +14,8 @@ namespace WebApplication2.Controllers
         DBKUTUPHANEEntitiesEnSon db = new DBKUTUPHANEEntitiesEnSon();
         public ActionResult Index()
         {
-            return View();
+            var degerler = db.TBLHAREKET.ToList();
+            return View(degerler);
         }
         [HttpGet]
         public ActionResult OduncVer()

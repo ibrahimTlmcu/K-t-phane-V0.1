@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="584482bf87934a839fe0e65eb71bccfc" Name="Diagram1">
+      <Diagram DiagramId="584482bf87934a839fe0e65eb71bccfc" Name="Diagram1" ZoomLevel="82">
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLCEZALAR" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLHAREKET" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLKASA" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLKATEGORI" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLKITAP" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLPERSONEL" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLPERSONEL" Width="1.5" PointX="8" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLUYELER" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLYAZARR" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <AssociationConnector Association="DBKUTUPHANEModel2.FK_TBLCEZALAR_TBLHAREKET" ManuallyRouted="false" />

@@ -11,9 +11,7 @@ namespace WebApplication2.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    using System.Threading.Tasks;
-    using System.Web.Mvc;
-
+    
     public partial class TBLYAZARR
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,15 +27,5 @@ namespace WebApplication2.Models.Entity
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLKITAP> TBLKITAP { get; set; }
-
-        public static implicit operator TBLYAZARR(Task<TBLYAZARR> v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static implicit operator TBLYAZARR(List<SelectListItem> v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
