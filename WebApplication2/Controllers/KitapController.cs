@@ -71,7 +71,7 @@ namespace WebApplication2.Controllers
             ktp.BASIMYIL = k.BASIMYIL;
             ktp.YAYINEVI = k.YAYINEVI;
             ktp.SAYFA = k.SAYFA;
-
+            ktp.DURUM = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

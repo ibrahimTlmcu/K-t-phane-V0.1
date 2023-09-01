@@ -29,8 +29,13 @@ namespace WebApplication2.Controllers
             db.TBLHAREKET.Add(P);
             db.SaveChanges();
             return View();
-        
-        
+         
+        }
+
+        public ActionResult OduncIade(int id )
+        {
+            var odn = db.TBLKATEGORI.Find(id);
+            return View("OduncIade",odn);
         }
     }
 }
