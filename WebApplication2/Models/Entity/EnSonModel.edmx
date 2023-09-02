@@ -66,6 +66,7 @@
           <Property Name="SAYFA" Type="varchar" MaxLength="4" />
           <Property Name="DURUM" Type="bit" />
           <Property Name="YAZAR" Type="int" />
+          <Property Name="KITAPRESMI" Type="varchar" MaxLength="350" />
         </EntityType>
         <EntityType Name="TBLPERSONEL">
           <Key>
@@ -278,6 +279,7 @@
           <NavigationProperty Name="TBLHAREKET" Relationship="Self.FK_TBLHAREKET_TBLKITAP" FromRole="TBLKITAP" ToRole="TBLHAREKET" />
           <NavigationProperty Name="TBLKATEGORI" Relationship="Self.FK_TBLKITAP_TBLKATEGORI" FromRole="TBLKITAP" ToRole="TBLKATEGORI" />
           <NavigationProperty Name="TBLYAZARR" Relationship="Self.FK_TBLKITAP_TBLYAZARR" FromRole="TBLKITAP" ToRole="TBLYAZARR" />
+          <Property Name="KITAPRESMI" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLPERSONEL">
           <Key>
@@ -482,6 +484,7 @@
           <EntitySetMapping Name="TBLKITAP">
             <EntityTypeMapping TypeName="DBKUTUPHANEModel2.TBLKITAP">
               <MappingFragment StoreEntitySet="TBLKITAP">
+                <ScalarProperty Name="KITAPRESMI" ColumnName="KITAPRESMI" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
                 <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
