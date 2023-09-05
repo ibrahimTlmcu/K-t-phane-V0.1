@@ -20,6 +20,8 @@
         <AssociationConnector Association="DBKUTUPHANEModel2.FK_TBLHAREKET_TBLUYELER" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel2.FK_TBLKITAP_TBLKATEGORI" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel2.FK_TBLKITAP_TBLYAZARR" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLHAKKIMIZ" Width="1.5" PointX="5.375" PointY="8.625" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLILETISIM" Width="1.5" PointX="2.375" PointY="9.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

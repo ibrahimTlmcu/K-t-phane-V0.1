@@ -34,5 +34,7 @@ namespace WebApplication2.Models.Entity
         public virtual DbSet<TBLPERSONEL> TBLPERSONEL { get; set; }
         public virtual DbSet<TBLUYELER> TBLUYELER { get; set; }
         public virtual DbSet<TBLYAZARR> TBLYAZARR { get; set; }
+        public virtual DbSet<TBLHAKKIMIZ> TBLHAKKIMIZ { get; set; }
+        public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
     }
 }

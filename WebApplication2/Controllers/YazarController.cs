@@ -23,6 +23,12 @@ namespace WebApplication2.Controllers
         }
         public ActionResult YazarEkle(TBLYAZARR P) 
         {
+
+            if (!ModelState.IsValid)
+            {
+                return View("YazarEkle");
+            }
+
             yazar.TBLYAZARR.Add(P);
             yazar.SaveChanges();
             return View();
