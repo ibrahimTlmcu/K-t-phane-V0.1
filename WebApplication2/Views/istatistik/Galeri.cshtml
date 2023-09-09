@@ -70,16 +70,14 @@
 
 <div style="margin-top :100px;">
 
-    <input type="file" name="dosyasec" id="dosyasec" class="byn btn-info" />
-
-    <br />
-
-    <input type="submit" name="name" value="kaydet" class="btn btn-warning" />
-
-
+    <form action="/istatistik/resimyukle" method="post" enctype="multipart/form-data">
+        <input type="file" name="dosya" id="dosya" class="byn btn-info" />
+        <br />
+        <input type="submit" name="name" value="kaydet" class="btn btn-warning" />
+    </form>
 </div>
 
-<form></form>
+
 
 <style>
 
