@@ -12,6 +12,8 @@ namespace WebApplication2.Models.Entity
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DBKUTUPHANEEntitiesEnSon : DbContext
     {
@@ -36,5 +38,10 @@ namespace WebApplication2.Models.Entity
         public virtual DbSet<TBLYAZARR> TBLYAZARR { get; set; }
         public virtual DbSet<TBLHAKKIMIZ> TBLHAKKIMIZ { get; set; }
         public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
+    
+        public virtual ObjectResult<EnFazlaKitapYazar_Result> EnFazlaKitapYazar()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EnFazlaKitapYazar_Result>("EnFazlaKitapYazar");
+        }
     }
 }

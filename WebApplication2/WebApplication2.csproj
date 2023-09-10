@@ -190,6 +190,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\EnFazlaKitapYazar_Result.cs">
+      <DependentUpon>EnSonModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\EnSonModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -550,11 +553,13 @@
     <Content Include="web3\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="web3\images\Thumbs.db" />
     <Content Include="web3\js\js" />
+    <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Kategori\KategoriGetir.cshtml" />
+    <Content Include="Views\Kategori\KategoriEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\Kategori\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

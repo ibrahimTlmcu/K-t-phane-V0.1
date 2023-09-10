@@ -11,8 +11,7 @@ namespace WebApplication2.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class TBLYAZARR
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,7 +21,6 @@ namespace WebApplication2.Models.Entity
         }
     
         public int ID { get; set; }
-        [Required(ErrorMessage ="Yazar Adi Bos Gecilemez")]
         public string AD { get; set; }
         public string SOYAD { get; set; }
         public string DETAY { get; set; }
