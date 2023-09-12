@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+
+
+
+
+<h2>Burasi Panel Sayfam</h2>
+
+
+<table class="table table-hover">
+    <tr>
+        <td>Mail Adresi :  @HttpContext.Current.User.Identity.Name</td>
+    </tr>
+    <tr>
+        <td> <label style="font-weight:bold">Ad:</label> @Session["Ad"].ToString()  </td>
+    </tr>
+     
+    <tr>
+        <td> <label style="font-weight:bold;">Soyad:</label> @Session["Soyad"].ToString()  </td>
+    </tr>
+    <tr>
+        <td> <label style="font-weight:bold"> Kullanici Adi:</label>   @Session["KullaniciAdi"].ToString()  </td>
+    </tr>
+    <tr>
+        <td><lable style="font-weight:bold"> Sifre:</lable> <input type="text" class="form-control"
+                                                                   
+         value="  @Session["Sifre"].ToString()"   />                                               
+                                                                 
+      </td>
+    </tr>
+    <td> <button class="btn btn-warning"> Guncelle </button> </td>
+
+
+</table>
