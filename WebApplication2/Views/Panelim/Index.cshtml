@@ -16,19 +16,19 @@
         <td>Mail Adresi :  @HttpContext.Current.User.Identity.Name</td>
     </tr>
     <tr>
-        <td> <label style="font-weight:bold">Ad:</label> @Session["Ad"].ToString()  </td>
+        <td> <label style="font-weight:bold">Ad:</label> @TempData["Ad"].ToString()  </td>
     </tr>
      
     <tr>
-        <td> <label style="font-weight:bold;">Soyad:</label> @Session["Soyad"].ToString()  </td>
+        <td> <label style="font-weight:bold;">Soyad:</label> @TempData["Soyad"].ToString()  </td>
     </tr>
     <tr>
-        <td> <label style="font-weight:bold"> Kullanici Adi:</label>   @Session["KullaniciAdi"].ToString()  </td>
+        <td> <label style="font-weight:bold"> Kullanici Adi:</label>   @TempData["KullaniciAdi"].ToString()  </td>
     </tr>
     <tr>
         <td><lable style="font-weight:bold"> Sifre:</lable> <input type="text" class="form-control"
                                                                    
-         value="  @Session["Sifre"].ToString()"   />                                               
+         value="  @TempData["Sifre"].ToString()"   />                                               
                                                                  
       </td>
     </tr>

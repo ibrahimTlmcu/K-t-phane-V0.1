@@ -24,11 +24,12 @@ namespace WebApplication2.Controllers
             if(bilgiler != null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.MAIL, false);
+                Session["Mail"] = bilgiler.MAIL.ToString();
                 Session["Ad"] = bilgiler.AD.ToString();
-                Session["Soyad"] = bilgiler.SOYAD.ToString();
-                Session["KullaniciAdi"] = bilgiler.KULLANICIADI.ToString();
-                Session["Sifre"] = bilgiler.SIFRE.ToString();
-                Session["Ad"] = bilgiler.AD.ToString();
+                TempData["Soyad"] = bilgiler.SOYAD.ToString();
+                TempData["KullaniciAdi"] = bilgiler.KULLANICIADI.ToString();
+                TempData["Sifre"] = bilgiler.SIFRE.ToString();
+                TempData["Ad"] = bilgiler.AD.ToString();
                 return RedirectToAction("Index","Panelim");
                 
             }
