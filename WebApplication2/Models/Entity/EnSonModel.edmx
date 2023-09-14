@@ -85,6 +85,17 @@
           <Property Name="YAZAR" Type="int" />
           <Property Name="KITAPRESMI" Type="varchar" MaxLength="350" />
         </EntityType>
+        <EntityType Name="TBLMESAJLAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GONDEREN" Type="nvarchar" MaxLength="450" />
+          <Property Name="ALICI" Type="nvarchar" MaxLength="450" />
+          <Property Name="KONU" Type="nvarchar" MaxLength="450" />
+          <Property Name="ICERIK" Type="nvarchar" MaxLength="450" />
+          <Property Name="TARIH" Type="nvarchar" MaxLength="450" />
+        </EntityType>
         <EntityType Name="TBLPERSONEL">
           <Key>
             <PropertyRef Name="ID" />
@@ -197,6 +208,7 @@
           <EntitySet Name="TBLKASA" EntityType="Self.TBLKASA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKITAP" EntityType="Self.TBLKITAP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMESAJLAR" EntityType="Self.TBLMESAJLAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLUYELER" EntityType="Self.TBLUYELER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLYAZARR" EntityType="Self.TBLYAZARR" Schema="dbo" store:Type="Tables" />
@@ -443,6 +455,7 @@
           <EntitySet Name="TBLHAKKIMIZ" EntityType="DBKUTUPHANEModel2.TBLHAKKIMIZ" />
           <EntitySet Name="TBLILETISIM" EntityType="DBKUTUPHANEModel2.TBLILETISIM" />
           <FunctionImport Name="EnFazlaKitapYazar" ReturnType="Collection(DBKUTUPHANEModel2.EnFazlaKitapYazar_Result)" />
+          <EntitySet Name="TBLMESAJLAR" EntityType="DBKUTUPHANEModel2.TBLMESAJLAR" />
         </EntityContainer>
         <EntityType Name="TBLHAKKIMIZ">
           <Key>
@@ -465,6 +478,17 @@
           <Property Type="String" Name="Column1" Nullable="true" MaxLength="100" />
           <Property Type="Int32" Name="Toplam" Nullable="true" />
         </ComplexType>
+        <EntityType Name="TBLMESAJLAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GONDEREN" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="ALICI" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="KONU" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="ICERIK" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="TARIH" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -600,6 +624,18 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="TBLMESAJLAR">
+            <EntityTypeMapping TypeName="DBKUTUPHANEModel2.TBLMESAJLAR">
+              <MappingFragment StoreEntitySet="TBLMESAJLAR">
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
+                <ScalarProperty Name="KONU" ColumnName="KONU" />
+                <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+                <ScalarProperty Name="GONDEREN" ColumnName="GONDEREN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

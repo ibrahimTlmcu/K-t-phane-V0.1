@@ -1,0 +1,30 @@
+﻿@using WebApplication2.Models.Entity
+@model List<TBLMESAJLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Gelen Mesajlar</h2>
+
+
+<table class="table table-hover">
+
+    <tr>
+        <th>Gonderen</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Islem</th>
+    </tr>
+
+
+    @foreach( var x in Model)
+            {
+                <tr>
+                    <td>@x.GONDEREN</td>
+                    <td>@x.KONU</td>
+                    <td>@x.ICERIK</td>
+                    <td>@x.TARIH</td>
+                </tr>
+            }
+</table>

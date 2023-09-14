@@ -38,6 +38,7 @@ namespace WebApplication2.Models.Entity
         public virtual DbSet<TBLYAZARR> TBLYAZARR { get; set; }
         public virtual DbSet<TBLHAKKIMIZ> TBLHAKKIMIZ { get; set; }
         public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
+        public virtual DbSet<TBLMESAJLAR> TBLMESAJLAR { get; set; }
     
         public virtual ObjectResult<EnFazlaKitapYazar_Result> EnFazlaKitapYazar()
         {

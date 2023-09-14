@@ -1,0 +1,33 @@
+﻿@model WebApplication2.Models.Entity.TBLMESAJLAR
+@{
+    ViewBag.Title = "YeniMesaj";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>YeniMesaj</h2>
+
+
+
+<form class="form-group" method="post">
+
+    <div class="form-group"></div>
+        <div style="margin-bottom:15px"></div>
+        <lable>Alici Mail</lable>
+        @Html.TextBoxFor(x => x.ALICI, new { @class = "form-control" })
+    <div style="margin-top:15px">
+
+        <div style="margin-bottom:15px"></div>
+        <lable>Konu</lable>
+        @Html.TextBoxFor(x => x.KONU, new { @class = "form-control" })
+    <div style="margin-top:15px"></div>
+
+
+        <div style="margin-bottom:15px"></div>
+        <lable style="font-weight:bolder">MESAJ</lable>
+        @Html.TextAreaFor(x => x.ICERIK, new { @class = "form-control" })
+        <div style="margin-top:15px">
+
+            <button class="btn bg-success">Mesaj Gonder</button>
+        </div>
+    </div>
+</form>
