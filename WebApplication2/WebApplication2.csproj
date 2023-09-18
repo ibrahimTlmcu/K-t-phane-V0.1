@@ -178,6 +178,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DuyurularController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\istatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
@@ -216,6 +217,9 @@
       <DependentUpon>EnSonModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBLCEZALAR.cs">
+      <DependentUpon>EnSonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TBLDUYURULAR.cs">
       <DependentUpon>EnSonModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBLHAKKIMIZ.cs">
@@ -639,6 +643,9 @@
     <Content Include="Views\Mesajlar\YeniMesaj.cshtml" />
     <Content Include="Views\Mesajlar\Giden.cshtml" />
     <Content Include="Views\Panelim\Kitaplarim.cshtml" />
+    <Content Include="Views\Duyurular\Index.cshtml" />
+    <Content Include="Views\Duyurular\YeniDuyuru.cshtml" />
+    <Content Include="Views\Duyurular\DuyuruDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

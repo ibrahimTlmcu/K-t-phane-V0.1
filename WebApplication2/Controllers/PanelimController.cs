@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using WebApplication2.Models.Entity;
 
 namespace WebApplication2.Controllers
@@ -44,7 +45,12 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-    
+        public ActionResult LogOut()
+        {
+            return RedirectToAction("GirisYap","Login");
+        }
+
+        
     
     }
 }

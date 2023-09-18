@@ -18,7 +18,7 @@ namespace WebApplication2.Controllers
             var deger1 = db.TBLUYELER.Count();
             var deger2 = db.TBLKITAP.Count();
             var deger3 = db.TBLKITAP.Where(x => x.DURUM == false).Count();
-            var deger4 = db.EnFazlaKitapYazar().FirstOrDefault();
+            
             var deger5 = db.TBLKITAP.GroupBy(X => X.YAYINEVI).OrderByDescending(z => z.Count()).
             Select(y=> new {y.Key}).FirstOrDefault();
 
@@ -26,7 +26,7 @@ namespace WebApplication2.Controllers
 
 
             ViewBag.deger5 = deger5;
-            ViewBag.deger4 = deger4;
+            
             ViewBag.deger1 = deger1;
             ViewBag.deger2 = deger2;
             ViewBag.deger3 = deger3;

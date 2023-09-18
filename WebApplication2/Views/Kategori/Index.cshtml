@@ -32,7 +32,7 @@
             <td>
                 @Html.ActionLink("Sil", "KategoriSil", new { id = ktgr.ID },
                        new { @class = "btn btn-danger", onclick = "return confirm('Silmek isityor musunuz')" })
-                @Html.ActionLink("Guncelle", "KategoriGetir", new { id = ktgr.ID })
+                @Html.ActionLink("Guncelle", "KategoriGetir", new { id = ktgr.ID }, new { @class = "btn btn-info" })
             </td>
         </tr>
     }
@@ -42,4 +42,4 @@
 
 
 
-<a class="btn btn-primary" href="/Kategori/KategoriEkle/">Ynei Kategori</a>
+<a class="btn btn-primary" href="/Kategori/KategoriEkle/">Yeni Kategori</a>
