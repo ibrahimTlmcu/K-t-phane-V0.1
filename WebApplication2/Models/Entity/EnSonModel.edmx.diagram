@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="584482bf87934a839fe0e65eb71bccfc" Name="Diagram1" ZoomLevel="82">
+      <Diagram DiagramId="584482bf87934a839fe0e65eb71bccfc" Name="Diagram1" ZoomLevel="105">
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLCEZALAR" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel2.TBLHAREKET" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />

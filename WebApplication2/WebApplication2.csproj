@@ -432,6 +432,7 @@
     <Content Include="webhava\w3layouts-License.txt" />
     <Content Include="weblogin\css\fontawesome-all.css" />
     <Content Include="weblogin\css\style.css" />
+    <Content Include="weblogin\images\cover44.jpg" />
     <Content Include="weblogin\images\cover4.jpg" />
     <Content Include="weblogin\index.html" />
     <Content Include="weblogin\w3layouts-License.txt" />
@@ -475,6 +476,7 @@
     <Content Include="web\img\portfolio\cake.png" />
     <Content Include="web\img\portfolio\circus.png" />
     <Content Include="web\img\portfolio\game.png" />
+    <Content Include="web\img\martin.jpg" />
     <Content Include="web\img\portfolio\safe.png" />
     <Content Include="web\img\portfolio\submarine.png" />
     <Content Include="web\index.html" />
